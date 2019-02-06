@@ -1,11 +1,13 @@
 import bs4 as bs
-import urllib.request
+import urllib
+from urllib.request import Request, urlopen
 import os
 
 # example url: url = "https://boards.4channel.org/w/thread/2113466"
 #put in a 4chan thread url for bs to read
-url = input('Please enter a 4chan URL: ') 
-page = urllib.request.urlopen(url).read()
+url = input('Please enter a 4chan URL: ')
+req = Request(url, headers={'User-Agent': 'Mozilla/5.0'})
+page = urllib.request.urlopen(req).read()
 soup = bs.BeautifulSoup(page,'lxml')
 
 #creating a path onto the desktop named with the thread ID number
