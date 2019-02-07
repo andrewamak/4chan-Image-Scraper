@@ -32,7 +32,7 @@ for links in soup.find_all('img'):
 #the x is for nomenclature. the try/except clauses are for differentiating between jpg/png file types. 
 x = 0
 for items in image_box:
-    image_name = url[-7:] + '(' + str(x) + ')'
+    image_name = url[-7:] + '_' + str(x)
     try:
         try:
             urllib.request.urlretrieve(items + '.png', os.path.join(my_path, image_name))
