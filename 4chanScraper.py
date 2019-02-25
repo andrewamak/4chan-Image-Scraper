@@ -44,4 +44,4 @@ for items in image_box:
 
     x += 1
 
-print("""Done. Saved to /home/""" + user + """Pictures)
+print("""Done. Saved to /home/""" + user + """Pictures""")
