@@ -7,7 +7,7 @@ import os
 #put in a 4chan thread url for bs to read
 url = input('Please enter a 4chan URL: ')
 folder_name = input('Enter folder name(Press ENTER for default): ') 
-username = input('Enter username')
+user = input('Enter username: ')
 req = Request(url, headers={'User-Agent': 'Mozilla/5.0'})
 page = urllib.request.urlopen(req).read()
 soup = bs.BeautifulSoup(page,'lxml')
